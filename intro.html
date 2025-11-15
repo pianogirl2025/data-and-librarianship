@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Data Science & Library Research</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Introduction to Data Science</h1>
+  <div id="nav-placeholder"></div>
+</header>
+
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
+
+<main>
+    <section class="definition">
+  <h2>What is Data Science?</h2>
+  <p>
+    Data science is an interdisciplinary field that combines statistical analysis, computer programming, and domain expertise to extract meaningful insights from data. It involves collecting, cleaning, organizing, and analyzing large and complex datasets to support informed decision-making. In the context of libraries and information science, data science empowers librarians to better understand user behavior, optimize resource management, and contribute to research through data-driven methods. Key skills include proficiency in programming languages like Python, data visualization, and familiarity with metadata standards, enabling professionals to handle diverse data workflows effectively.
+  </p>
+  <p>
+    At its core, data science is about uncovering patterns and trends that might otherwise remain hidden, helping organizations solve problems and improve services. As demonstrated by initiatives such as Library Carpentry’s data lessons and university library dashboards, data science supports transparency, assessment, and strategic planning in library environments. With increasing volumes of digital information, data science equips librarians and information professionals with tools to engage in digital scholarship, enhance data literacy, and foster collaboration across disciplines.
+  </p>
+</section>
+ <section class="resources">
+    <h2>Recommended Resources</h2>
+    <ul>
+      <li>
+        <strong>Library Carpentry – Data Lessons</strong>
+        <p>A beginner-friendly series designed specifically for library workers.</p>
+        <a href="https://librarycarpentry.org/" target="_blank" rel="noopener noreferrer">Visit Library Carpentry</a>
+      </li>
+
+      <li>
+        <strong>“Python for Everybody” by Dr. Charles Severance</strong>
+        <p>A great introduction to Python, used widely in data analysis.</p>
+        <a href="https://www.py4e.com/" target="_blank" rel="noopener noreferrer">Start Learning</a>
+      </li>
+
+      <li>
+        <strong>Open Intro to Data Science</strong>
+        <p>Free, open textbook covering foundational concepts.</p>
+        <a href="https://www.openintro.org/book/os/" target="_blank" rel="noopener noreferrer">Read the Book</a>
+      </li>
+
+      <li>
+        <strong>Google Dataset Search</strong>
+        <p>Discover datasets for learning, exploration, and research.</p>
+        <a href="https://datasetsearch.research.google.com/" target="_blank" rel="noopener noreferrer">Browse Datasets</a>
+      </li>
+    </ul>
+  </section>
+</main>
+
+</body>
+</html>
