@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Additional Resources | Data Science & Librarianship</title>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
+<section>
+  <h2>Recommended Tutorials and Tools</h2>
+  <ul>
+    <li><a href="https://www.libguides.com" target="_blank" rel="noopener noreferrer">LibGuides Tutorial</a></li>
+    <li><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools Web Tutorials</a></li>
+    <li><a href="https://css-tricks.com" target="_blank" rel="noopener noreferrer">CSS Tricks for Styling</a></li>
+    <li><a href="https://www.coursera.org" target="_blank" rel="noopener noreferrer">Coursera: Data Science Courses</a></li>
+    <li><a href="https://datacarpentry.org" target="_blank" rel="noopener noreferrer">Data Carpentry Workshops</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>Created by Amy Aguirre — 2025</p>
+</footer>
+
+<script>
+  // Load the navigation HTML into the placeholder div
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav.html').innerHTML = data;
+      // Set active nav link
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll("#nav-placeholder nav ul.nav-list li a");
+      navLinks.forEach(link => {
+        if(link.getAttribute("href") === currentPage || (link.getAttribute("href") === "index.html" && currentPage === "")) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(err => console.error('Failed to load nav:', err));
+</script>
+
+</body>
+</html>

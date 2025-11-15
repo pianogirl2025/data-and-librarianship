@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Data Science & Library Research</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Data Science & Library Research</h1>
+ <div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
+
+<section class="intro">
+  <h2>Welcome to the Data Science & Librarianship Guide</h2>
+  <p>This guide explores the dynamic intersection of <strong>Data Science</strong> and <strong>Library and Information Science</strong>, highlighting emerging research, key competencies, and innovative programs shaping the future of information professionals. Whether you're a student, librarian, or researcher, you'll find curated resources and insights designed to deepen your understanding of how data-driven tools and methodologies enhance library services, digital scholarship, and data literacy.</p>
+
+  <p>Use the navigation above to explore research sources, practical resources, and learn more about the evolving role of librarians in the digital age.</p>
+</section>
+
+<section>
+  <h2>Explore the Site</h2>
+  <ul class="pages-list">
+    <li><a href="sources.html">Sources & Summaries</a> – Detailed research articles and program descriptions.</li>
+  </ul>
+</section>
+
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll("nav ul.nav-list li a");
+
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage || (linkPage === "index.html" && currentPage === "")) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(err => console.error('Failed to load nav:', err));
+</script>
+
+</body>
+</html>

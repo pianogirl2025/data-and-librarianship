@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Amy Aguirre | Data Science & Librarianship</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div id="nav-placeholder"></div>
+</header>
+
+<section id="about">
+  <h1>About Me</h1>
+
+  <img src="images/amy-profile.jpg" alt="Amy Aguirre" class="small-image">
+
+  <p>My name is <strong>Amy Aguirre</strong>, and I am currently pursuing my Master of Library and Information Science (MLIS) at <em>San José State University</em>. This LibGuide was created as part of my work in <em>INFO 210: Reference</em>, and it represents my ongoing exploration of the evolving relationship between data science and librarianship.</p>
+
+  <p>I come from a background in performing arts and education. I earned my Bachelor of Arts in Ethnomusicology with a minor in Education from the University of California, Davis, where I studied music, culture, pedagogy, and the ways communities use music to express identity and experience. Additionally, I hold Associate of Arts degrees in Spanish for Heritage Speakers, Language Arts, Humanities, and Music, all of which have shaped my interdisciplinary approach to learning and research.</p>
+
+  <p>My academic and professional interests sit at the intersection of music, culture, education, technology, and librarianship. I am fascinated by how emerging technologies, especially data science, AI, and digital research tools can support more equitable, meaningful, and culturally responsive library services.</p>
+
+  <p>As an information professional in training, I am committed to exploring how librarians can use data-driven approaches to strengthen instruction, enhance reference services, and support student learning. I am particularly interested in the ethical use of data in educational and library environments, especially as it relates to privacy, accessibility, and community-centered practice.</p>
+
+  <p>By combining my background in the arts with my growing technical skills, I hope to contribute to projects that bridge creativity and computation. Whether through digital scholarship, metadata work, community archives, or instructional design, I believe libraries are uniquely positioned to use data to empower users while honoring their stories and identities.</p>
+
+  <p>Thank you for taking the time to explore this guide. I welcome questions, conversations, and collaboration. Please feel free to connect with me:</p>
+
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amy-aguirre-8886361ab/" target="_blank">linkedin.com/in/amy-aguirre-8886361ab</a><br>
+     <strong>Email:</strong> <a href="mailto:amy.aguirre@sjsu.edu">amy.aguirre@sjsu.edu</a>
+  </p>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Amy Aguirre. All rights reserved.</p>
+</footer>
+
+<script>
+  // Load navigation into placeholder and highlight active link
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll("#nav-placeholder nav ul.nav-list li a");
+
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage || (link.getAttribute("href") === "index.html" && currentPage === "")) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(err => console.error('Failed to load nav:', err));
+</script>
+
+</body>
+</html>

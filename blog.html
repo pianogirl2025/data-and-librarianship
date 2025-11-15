@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reflections & Blog | Amy Aguirre</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Reflections & Blog</h1>
+</header>
+
+<div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
+
+
+<main>
+  
+   <section class="blog-post">
+  <h2>My Evolving Understanding of Data Science in Libraries</h2>
+
+  <p>When I first started library school, I didn’t really know what data science was. I kept seeing the term pop up in my courses and research, which sparked my curiosity. So, I decided to dig deeper. What I found while doing so was interesting. Data science is not just a word only people in information technology know, but it’s a powerful field that is reshaping how libraries operate and how they serve their communities.</p>
+
+  <p>Through my MLIS coursework and research, my view of data science has deepened significantly. I now have a better understanding of how essential data science skills are in librarianship, especially in an age where we are surrounded by an overwhelming amount of data. Data science equips librarians with the tools to organize, analyze, and make sense of information in innovative ways that enhance research, learning, and access.</p>
+
+  <p>One of the most valuable aspects of data science for modern librarianship, in my opinion, is its ability to help manipulate and interpret data to support students and researchers more effectively. Whether it’s teaching research strategies, improving resource discovery, or providing data-driven reference services, data science enhances the core mission of libraries, connecting people with information.</p>
+
+  <p>Data science skills complement traditional library skills beautifully. Librarians have always been experts at organizing and curating information, and now, with data science, we can add a technical layer that allows us to manage large datasets, automate routine tasks, and tailor services more precisely to user needs. This combination of traditional knowledge and technical expertise will be crucial as libraries continue to evolve in the digital era.</p>
+
+  <p>However, integrating data science into library work is not without challenges. Many librarians, especially those who completed their education before the rise of data science, may have limited knowledge or training in this area. This gap can make it difficult to adopt data science practices broadly. Additionally, libraries may face constraints in resources, training, and institutional support necessary for developing these competencies.</p>
+
+  <p>Despite these challenges, data science holds great promise for helping libraries better serve their communities. It can enable advanced research support such as data analysis, visualization, and managing digital repositories. It also offers ways to better understand user behavior and tailor services to meet diverse needs.</p>
+
+  <p>Personally, I’m excited to continue developing my skills in data analytics, programming languages like Python or R, and data visualization tools. I’m particularly interested in exploring how data science can be applied ethically in libraries to respect user privacy and promote equitable access to information.</p>
+
+  <p>Learning data science may seem daunting at first, but there are many accessible resources and supportive communities out there. I am someone who did not know how to code prior to the Fall 2025 semester, yet this website was created using HTML, CSS, and JavaScript. Embracing these skills can open exciting new doors in librarianship and make you an invaluable part of the information landscape.</p>
+
+  <p>While I haven’t yet had the chance to participate in a data science project within a library, the coursework and readings I’ve engaged with have already expanded my understanding. I look forward to future opportunities where I can apply these skills practically and contribute to innovative library services.</p>
+</section>
+
+  
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Amy Aguirre. All rights reserved.</p>
+</footer>
+
+<script>
+  // Load navigation bar via JS
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
