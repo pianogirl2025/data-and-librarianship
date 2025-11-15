@@ -1,27 +1,35 @@
-/* Reset */
+:root {
+  --color-primary: #2980b9;
+  --color-primary-dark: #34495e;
+  --color-accent: #e67e22;
+  --color-bg: #f9fafb;
+  --color-text: #2e2e2e;
+  --color-text-muted: #555555;
+  --color-border: #ddd;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body & Typography */
 body {
   font-family: 'Georgia', serif;
-  background: #f9fafb;
-  color: #2e2e2e;
+  background: var(--color-bg);
+  color: var(--color-text);
   max-width: 900px;
+  width: 100%;
   margin: 3rem auto;
   padding: 2rem 2.5rem;
   line-height: 1.7;
   font-size: 18px;
 }
 
-/* Header */
 header {
   text-align: center;
   margin-bottom: 3.5rem;
-  border-bottom: 3px solid #34495e;
+  border-bottom: 3px solid var(--color-primary-dark);
   padding-bottom: 1rem;
 }
 
@@ -29,12 +37,11 @@ header h1 {
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 3.2rem;
-  color: #34495e;
+  color: var(--color-primary-dark);
   letter-spacing: 1.5px;
   margin-bottom: 0.25rem;
 }
 
-/* Navigation Bar */
 nav {
   text-align: center;
   margin-bottom: 2rem;
@@ -50,7 +57,7 @@ nav {
 
 .nav-list li a {
   font-family: 'Open Sans', sans-serif;
-  color: #2980b9;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
   font-size: 1.15rem;
@@ -58,22 +65,26 @@ nav {
 }
 
 .nav-list li a:hover,
-.nav-list li a:focus {
-  color: #e67e22;
+.nav-list li a:focus-visible {
+  color: var(--color-accent);
   text-decoration: underline;
+  outline: none;
+}
+
+.nav-list li a:focus {
+  outline: none;
 }
 
 .nav-list li a.active {
-  color: #e67e22;
+  color: var(--color-accent);
   text-decoration: underline;
   font-weight: 700;
 }
 
-/* Intro Section */
 .intro {
   font-style: italic;
-  color: #555555;
-  border-left: 6px solid #2980b9;
+  color: var(--color-text-muted);
+  border-left: 6px solid var(--color-primary);
   background-color: #eaf2f8;
   padding: 1.2rem 1.5rem;
   margin-bottom: 3rem;
@@ -82,37 +93,35 @@ nav {
 }
 
 .intro a {
-  color: #2980b9;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .intro a:hover,
-.intro a:focus {
-  color: #e67e22;
+.intro a:focus-visible {
+  color: var(--color-accent);
   text-decoration: underline;
+  outline: none;
 }
 
-/* Section Headings */
 section h2 {
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 2.2rem;
-  color: #34495e;
-  border-bottom: 3px solid #2980b9;
+  color: var(--color-primary-dark);
+  border-bottom: 3px solid var(--color-primary);
   padding-bottom: 0.4rem;
   margin-bottom: 1.75rem;
 }
 
-/* Paragraphs */
 section p {
   margin-bottom: 1.8rem;
   font-size: 1.1rem;
   color: #444444;
 }
 
-/* Lists */
 ul.pages-list {
   list-style: none;
   padding-left: 0;
@@ -126,43 +135,43 @@ ul.pages-list li {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   color: #3c3c3c;
+  line-height: 1.5;
 }
 
 ul.pages-list li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #2980b9;
+  color: var(--color-primary);
   font-size: 1.6rem;
   line-height: 1;
   top: 0;
 }
 
 ul.pages-list a {
-  color: #2980b9;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 ul.pages-list a:hover,
-ul.pages-list a:focus {
-  color: #e67e22;
+ul.pages-list a:focus-visible {
+  color: var(--color-accent);
   text-decoration: underline;
+  outline: none;
 }
 
-/* Footer */
 footer {
   text-align: center;
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--color-border);
   color: #777;
   font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   body {
     margin: 1.5rem;
@@ -198,16 +207,14 @@ footer {
   }
 }
 
-/* Image size helper */
 .small-image {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  max-width: 100%;
-  
-  /* Blog Stuff */
 }
+
 .blog-post {
   margin-bottom: 3rem;
   padding-bottom: 1.5rem;
