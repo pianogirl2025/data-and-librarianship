@@ -3,37 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Data Science & Library Research</title>
+  <title>Data Science & Librarianship Guide | Amy Aguirre</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <h1>Data Science & Library Research</h1>
- <div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
+</header>
+
+<main class="container">
+
+  <section class="intro">
+    <h2>Welcome to the Data Science & Librarianship Guide</h2>
+    <p>
+      Welcome! This guide was created as part of my MLIS coursework to explore how data science 
+      is transforming modern librarianship. As libraries continue to evolve, understanding data and
+      how it's collected, analyzed, and used, has become essential for supporting research, 
+      improving user experiences, and making informed decisions.
+    </p>
+    <p>
+      Use the navigation above to explore research sources, practical tools, and reflections 
+      on the evolving role of data in the information field.
+    </p>
+  </section>
+
+  <section>
+    <h2>What This Guide Includes</h2>
+    <p>
+      This LibGuide-style website introduces core concepts of data science, highlights tools 
+      and resources to build data skills, and reflects on my own learning journey as an MLIS 
+      student. You’ll find recommended readings, examples of how libraries use data, and 
+      personal insights based on my coursework.
+    </p>
+  </section>
+
+  <section>
+    <h2>Who This Guide Is For</h2>
+    <p>
+      This guide is designed for MLIS students, early-career librarians, educators, and anyone 
+      curious about the intersection of data science and library work. Whether you are new to 
+      the topic or developing technical skills, this guide provides accessible starting points 
+      and real world examples.
+    </p>
+  </section>
+
+  <section>
+    <h2>Explore the Site</h2>
+    <ul>
+      <li><a href="sources.html">Sources & Summaries</a> – Peer-reviewed articles with explanations.</li>
+      <li><a href="resources.html">Additional Resources</a> – Tools, books, and learning materials.</li>
+      <li><a href="about.html">About Me</a> – My MLIS focus and interest in data librarianship.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Amy Aguirre. All rights reserved.</p>
+</footer>
+
 <script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
-    });
-</script>
-
-<section class="intro">
-  <h2>Welcome to the Data Science & Librarianship Guide</h2>
-  <p>This guide explores the dynamic intersection of <strong>Data Science</strong> and <strong>Library and Information Science</strong>, highlighting emerging research, key competencies, and innovative programs shaping the future of information professionals. Whether you're a student, librarian, or researcher, you'll find curated resources and insights designed to deepen your understanding of how data-driven tools and methodologies enhance library services, digital scholarship, and data literacy.</p>
-
-  <p>Use the navigation above to explore research sources, practical resources, and learn more about the evolving role of librarians in the digital age.</p>
-</section>
-
-<section>
-  <h2>Explore the Site</h2>
-  <ul class="pages-list">
-    <li><a href="sources.html">Sources & Summaries</a> – Detailed research articles and program descriptions.</li>
-  </ul>
-</section>
-
-<script>
+  // load nav and highlight active page
   fetch('nav.html')
     .then(response => response.text())
     .then(data => {
